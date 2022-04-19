@@ -16,6 +16,7 @@ public class FactoryMode {
 class SendFactoryNormal{
 	public Sender produce(String type) {
 		if("mail".equalsIgnoreCase(type)) {
+			System.out.println("i am coming");
 			return new MailSender();
 		}else if("sms".equalsIgnoreCase(type)) {
 			return new SmsSender();
