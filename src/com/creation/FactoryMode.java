@@ -21,6 +21,7 @@ class SendFactoryNormal{
 			return new MailSender();
 		}else if("sms".equalsIgnoreCase(type)) {
 			int i =1;
+			int i =2;
 			return new SmsSender();
 		}
 		System.out.println("未找到输入的类型");
