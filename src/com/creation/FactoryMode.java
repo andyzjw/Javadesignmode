@@ -17,6 +17,7 @@ class SendFactoryNormal{
 	public Sender produce(String type) {
 		if("mail".equalsIgnoreCase(type)) {
 			System.out.println("i am coming");
+			System.out.println("i am coming 1223");
 			return new MailSender();
 		}else if("sms".equalsIgnoreCase(type)) {
 			int i =1;
