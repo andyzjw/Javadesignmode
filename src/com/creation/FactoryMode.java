@@ -9,7 +9,7 @@ public class FactoryMode {
 }
 
 /**
- * ÆÕÍ¨¹¤³§Ä£Ê½
+ * æ™®é€šå·¥å‚æ¨¡å¼
  * @author andy
  *
  */
@@ -18,13 +18,14 @@ class SendFactoryNormal{
 		if("mail".equalsIgnoreCase(type)) {
 			return new MailSender();
 		}else if("sms".equalsIgnoreCase(type)) {
+			int i =1;
 			return new SmsSender();
 		}
-		System.out.println("Î´ÕÒµ½ÊäÈëµÄÀàĞÍ");
+		System.out.println("æœªæ‰¾åˆ°è¾“å…¥çš„ç±»å‹");
 		return null;
 	}
 }
-// ¶à¸ö¹¤³§Ä£Ê½
+// å¤šä¸ªå·¥å‚æ¨¡å¼
 class SendFactoryMulty{
 	public Sender produceMail(String type) {
 			return new MailSender();
@@ -33,7 +34,7 @@ class SendFactoryMulty{
 			return new SmsSender();
 	}
 }
-// ¾²Ì¬¹¤³§Ä£Ê½
+// é™æ€å·¥å‚æ¨¡å¼
 class SendFactoryMultyStatic{
 	public static Sender produceMail(String type) {
 		return new MailSender();
